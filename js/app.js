@@ -14,7 +14,26 @@ const bike = document.querySelector(".fa-bicycle");
 const bomb = document.querySelector(".fa-bomb");
 let cardArray[8]=[diamond, plane, anchor, bolt, cube, leaf, bike, bomb];
 
+//dom manipulations
+const each = document.getElementByClass("card");
 
+//click event listener
+function newFlip(each){
+  openCards.push(each);
+}
+
+function openSymbol(each){
+  card.classList.add('open');
+  card.classList.add('show');
+ }
+
+deck.addEventListener('click',function(event){
+  const card = event.target;
+  if (openCards.length<2){
+    if (!card.classList.contains('open')){
+      openSymbol(each);
+      newFlip(each);
+    }}
 
 
 /*
