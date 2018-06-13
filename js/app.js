@@ -1,6 +1,19 @@
-/*
- * Create a list that holds all of your cards
- */
+//class manipulations
+const fa = document.querySelector(".fa");
+const star = document.querySelector(".fa-star");
+const repeat = document.querySelector(".fa-repeat");
+const card = document.querySelector(".card");
+const match = document.querySelector(".match");
+const diamond = document.querySelector(".fa-diamond");
+const plane = document.querySelector(".fa-paper-plane-o");
+const anchor = document.querySelector(".fa-anchor");
+const bolt = document.querySelector(".fa-bolt");
+const cuse = document.querySelector(".fa-cube");
+const leaf = document.querySelector(".fa-leaf");
+const bike = document.querySelector(".fa-bicycle");
+const bomb = document.querySelector(".fa-bomb");
+
+
 
 
 /*
