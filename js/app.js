@@ -18,6 +18,8 @@ let cardArray[8]=[diamond, plane, anchor, bolt, cube, leaf, bike, bomb];
 const each = document.getElementByClass("card");
 
 //click event listener
+let openCards = []
+
 function newFlip(each){
   openCards.push(each);
 }
