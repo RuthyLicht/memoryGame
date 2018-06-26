@@ -1,4 +1,4 @@
-//class manipulations
+//class manipulationscname
 const fa = document.querySelector(".fa");
 const star = document.querySelector(".fa-star");
 const repeat = document.querySelector(".fa-repeat");
@@ -12,10 +12,11 @@ const cube = document.querySelector(".fa-cube");
 const leaf = document.querySelector(".fa-leaf");
 const bike = document.querySelector(".fa-bicycle");
 const bomb = document.querySelector(".fa-bomb");
-let cardArray[8]=[diamond, plane, anchor, bolt, cube, leaf, bike, bomb];
+const deck = document.querySelector(".deck");
+let cardArray = [diamond, plane, anchor, bolt, cube, leaf, bike, bomb];
 
 //dom manipulations
-const each = document.getElementByClass("card");
+const each = document.getElementsByClassName("card");
 
 //click event listener
 let openCards = []
@@ -36,6 +37,7 @@ deck.addEventListener('click',function(event){
       openSymbol(each);
       newFlip(each);
     }}
+  })
 
 
 /*
