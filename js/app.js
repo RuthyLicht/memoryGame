@@ -1,4 +1,3 @@
-//class manipulationscname
 const fa = document.querySelector(".fa");
 const star = document.querySelector(".fa-star");
 const repeat = document.querySelector(".fa-repeat");
@@ -12,8 +11,7 @@ const cube = document.querySelector(".fa-cube");
 const leaf = document.querySelector(".fa-leaf");
 const bike = document.querySelector(".fa-bicycle");
 const bomb = document.querySelector(".fa-bomb");
-const deck = document.querySelector(".deck");
-let cardArray = [diamond, plane, anchor, bolt, cube, leaf, bike, bomb];
+let cardArray=[diamond, plane, anchor, bolt, cube, leaf, bike, bomb];
 
 //dom manipulations
 const each = document.getElementsByClassName("card");
@@ -26,18 +24,36 @@ function newFlip(each){
 }
 
 function openSymbol(each){
-  card.classList.add('open');
-  card.classList.add('show');
+  each.classList.add('open');
+  each.classList.add('show');
  }
 
+ function matched() {
+   each.classList.add('match');
+   each.classList.remove('open', 'show');
+ }
+
+const deck = document.querySelector('.deck');
 deck.addEventListener('click',function(event){
   const card = event.target;
   if (openCards.length<2){
     if (!card.classList.contains('open')){
-      openSymbol(each);
-      newFlip(each);
+      openSymbol(card);
+      newFlip(card);
     }}
   })
+
+//comparing 2 open open cards
+function compare(openCards){
+  if (openCards.length === 2){
+    if (!card.classList === true){
+      matched(card);
+    }
+    else {
+      each.classList.remove();
+    }
+  }
+}
 
 
 /*
@@ -66,7 +82,7 @@ function shuffle(array) {
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
+ *  - add the card to a list of "open" cards (put this functionality in another function that you call from this one)
  *  - if the list already has another card, check to see if the two cards match
  *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
  *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
