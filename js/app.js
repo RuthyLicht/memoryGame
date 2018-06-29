@@ -46,11 +46,13 @@ deck.addEventListener('click',function(event){
 //comparing 2 open open cards
 function compare(openCards){
   if (openCards.length === 2){
-    if (!card.classList === true){
+    if (openCards[0].classList === openCards[1].classList){
       matched(card);
     }
     else {
-      each.classList.remove();
+      openCards[1].classList.remove('open', 'show');
+      openCards[0].classList.remove('open', 'show');
+      openCards = [];
     }
   }
 }
