@@ -51,7 +51,9 @@ function compare(openCards){
     }
     else {
       openCards[1].classList.remove('open', 'show');
+      openCards[1].pop(each);
       openCards[0].classList.remove('open', 'show');
+      openCards[0].pop(each);
       openCards = [];
     }
   }
