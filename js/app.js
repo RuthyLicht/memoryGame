@@ -15,6 +15,7 @@ let cardArray=[diamond, plane, anchor, bolt, cube, leaf, bike, bomb];
 
 //dom manipulations
 const each = document.getElementsByClassName("card");
+const deck = document.querySelector('.deck');
 
 //click event listener
 let openCards = []
@@ -33,7 +34,6 @@ function openSymbol(each){
    each.classList.remove('open', 'show');
  }
 
-const deck = document.querySelector('.deck');
 deck.addEventListener('click',function(event){
   const card = event.target;
   if (openCards.length<2){
@@ -47,7 +47,7 @@ deck.addEventListener('click',function(event){
 function compare(openCards){
   if (openCards.length === 2){
     if (openCards[0].classList === openCards[1].classList){
-      matched(card);
+      matched(each);
     }
     else {
       openCards[1].classList.remove('open', 'show');
